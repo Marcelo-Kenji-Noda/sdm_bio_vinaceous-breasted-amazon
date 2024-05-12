@@ -1,0 +1,3 @@
+[submodule "submodules/sdm_bio"]
+	path = submodules/sdm_bio
+	url = https://github.com/Marcelo-Kenji-Noda/sdm_bio.git
