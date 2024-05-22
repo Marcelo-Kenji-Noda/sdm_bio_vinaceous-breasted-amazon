@@ -1,0 +1,87 @@
+[bounds]
+min_lat = -24
+max_lat = -18
+min_lon = -47
+max_lon = -40
+
+[files]
+presence_absence_json = "C:/Users/kenji/dev/sdm_bio_vinaceous-breasted-amazon/data/json/presence_absence.json"
+features_path = "C:/Users/kenji/dev/sdm_bio_vinaceous-breasted-amazon/data/features.parquet"
+
+[raster_files]
+run_download = true
+paths = [
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_1.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_2.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_3.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_4.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_5.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_6.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_7.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_8.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_9.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_10.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_11.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_12.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_13.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_14.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_15.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_16.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_17.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_18.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_19.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Cultivated_and_Managed_Vegetation.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Deciduous_Broadleaf_Trees.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Evergreen_Broadleaf_Trees.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Herbaceous_Vegetation.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Mixed_Other_Trees.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Open_Water.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Regularly_Flooded_Vegetation.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Shrubs.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/vegetacao_ibge1992_br.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/solos2001_br.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/sa2001tree_br.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/exposicao_br.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/density3_br.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/declividade_br.tif',
+    'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/altitude_br.tif'
+]
+columns = [
+    'BIOVAR1',
+    'BIOVAR2',
+    'BIOVAR3',
+    'BIOVAR4',
+    'BIOVAR5',
+    'BIOVAR6',
+    'BIOVAR7',
+    'BIOVAR8',
+    'BIOVAR9',
+    'BIOVAR10',
+    'BIOVAR11',
+    'BIOVAR12',
+    'BIOVAR13',
+    'BIOVAR14',
+    'BIOVAR15',
+    'BIOVAR16',
+    'BIOVAR17',
+    'BIOVAR18',
+    'BIOVAR19',
+    'Cultivated_and_Managed_Vegetation',
+    'Deciduous_Broadleaf_Trees',
+    'Evergreen_Broadleaf_Trees',
+    'Herbaceous_Vegetation',
+    'Mixed_Other_Trees',
+    'Open_Water',
+    'Regularly_Flooded_Vegetation',
+    'Shrubs',
+    'vegetacao_ibge1992_br',
+    'solos2001_br',
+    'sa2001tree_br',
+    'exposicao_br',
+    'density3_br',
+    'declividade_br',
+    'altitude_br',
+    'Presence'
+]
+output_path = "C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/generated_files/test"
+info = "C:/Users/kenji/dev/sdm_bio_vinaceous-breasted-amazon/data/raster_info.parquet"
