@@ -1,15 +1,21 @@
 [general]
+force_use_date = false
 output_path = "C:/Users/kenji/dev/sdm_bio_vinaceous-breasted-amazon/data"
-date = "30-05-2024"
+input_path = "C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/"
+date = "02-06-2024"
+    [general.stages]
+    pre_process = true
+    thinning = true
+    background = true
+    feature_selection = true
 
 [pre_process]
     [pre_process.files]
-    dirs_generated_files = "C:/Users/kenji/dev/sdm_bio_vinaceous-breasted-amazon/data"
-    file_occurence_processed = "processed_gbif.parquet"
-    occurence = "occurence.parquet"
-    gbif_parquet = "raw_gbif.parquet"
+    file_occurence_processed = "PREP/processed_gbif.parquet"
+    occurence = "PREP/occurence.parquet"
+    gbif_parquet = "PREP/raw_gbif.parquet"
     [pre_process.load]
-    file_occurence_unprocessed = "C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/INPUT/gbif.csv"
+    file_occurence_unprocessed = "INPUT/gbif.csv"
     columns = ['countryCode','locality','decimalLatitude','decimalLongitude','eventDate','individualCount','basisOfRecord','collectionCode','stateProvince']
         [pre_process.load.dtype]
             'countryCode'= 'object'
@@ -49,47 +55,47 @@ date = "30-05-2024"
     "Sp"="SP"
 
 [thinning]
-    file_path = "C:/Users/kenji/dev/sdm_bio_vinaceous-breasted-amazon/data"
-    date = "30-05-2024"
-    min_distance=1000
+    min_distance=5000
+    file_thinned_data= "INPUT/occurences_filtered_{}_m.parquet"
 
 [background]
     raster_file_path = [
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_1.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_2.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_3.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_4.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_5.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_6.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_7.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_8.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_9.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_10.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_11.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_12.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_13.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_14.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_15.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_16.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_17.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_18.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/TEMPERATURE/wc2.1_30s_bio_19.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Cultivated_and_Managed_Vegetation.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Deciduous_Broadleaf_Trees.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Evergreen_Broadleaf_Trees.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Herbaceous_Vegetation.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Mixed_Other_Trees.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Open_Water.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Regularly_Flooded_Vegetation.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/FEATURES/VEGETACAO/Shrubs.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/vegetacao_ibge1992_br.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/solos2001_br.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/sa2001tree_br.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/exposicao_br.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/density3_br.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/declividade_br.tif',
-        'C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/processed/processed/altitude_br.tif'
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_1.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_2.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_3.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_4.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_5.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_6.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_7.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_8.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_9.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_10.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_11.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_12.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_13.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_14.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_15.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_16.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_17.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_18.tif',
+        'FEATURES/TEMPERATURE/wc2.1_30s_bio_19.tif',
+        'processed/processed/vegetacao_ibge1992_br.tif',
+        'processed/processed/solos2001_br.tif',
+        'processed/processed/sa2001tree_br.tif',
+        'processed/processed/exposicao_br.tif',
+        'processed/processed/density3_br.tif',
+        'processed/processed/declividade_br.tif',
+        'processed/processed/altitude_br.tif',
+        'FEATURES/VEGETACAO/Cultivated_and_Managed_Vegetation.tif',
+        'FEATURES/VEGETACAO/Deciduous_Broadleaf_Trees.tif',
+        'FEATURES/VEGETACAO/Evergreen_Broadleaf_Trees.tif',
+        'FEATURES/VEGETACAO/Herbaceous_Vegetation.tif',
+        'FEATURES/VEGETACAO/Mixed_Other_Trees.tif',
+        'FEATURES/VEGETACAO/Open_Water.tif',
+        'FEATURES/VEGETACAO/Regularly_Flooded_Vegetation.tif',
+        'FEATURES/VEGETACAO/Shrubs.tif'
     ]
+
     raster_file_cols = [
         'BIOVAR1',
         'BIOVAR2',
@@ -110,6 +116,13 @@ date = "30-05-2024"
         'BIOVAR17',
         'BIOVAR18',
         'BIOVAR19',
+        'vegetacao_ibge1992_br',
+        'solos2001_br',
+        'sa2001tree_br',
+        'exposicao_br',
+        'density3_br',
+        'declividade_br',
+        'altitude_br',
         'Cultivated_and_Managed_Vegetation',
         'Deciduous_Broadleaf_Trees',
         'Evergreen_Broadleaf_Trees',
@@ -118,13 +131,38 @@ date = "30-05-2024"
         'Open_Water',
         'Regularly_Flooded_Vegetation',
         'Shrubs',
-        'vegetacao_ibge1992_br',
-        'solos2001_br',
-        'sa2001tree_br',
-        'exposicao_br',
-        'density3_br',
-        'declividade_br',
-        'altitude_br',
         'Presence'
     ]
-    n_random_points = 3000
+    n_random_points = 7_000
+    random_points = false
+    spacing = 10
+    use_convex_polygon = true
+    
+[feature_selection]
+threshhold = 0.7
+file_feature_selection_info ='INFO/feat_selection_info.json'
+
+[crop_files]
+shape_file = "INPUT/mant_completa.shp"
+source_tiff_path= '../generated_files/mantiqueira_cropped/wc2.1_30s_bio_1.tif'
+update_transformation_files= [
+    'vegetacao_ibge1992_br.tif',
+    'solos2001_br.tif',
+    'sa2001tree_br.tif',
+    'exposicao_br.tif',
+    'density3_br.tif',
+    'declividade_br.tif',
+    'altitude_br.tif'
+]
+
+[models]
+selected_models = ["random_forest_class","extra_tree_class","ada_class","bagging_class","gbooster","xgb_class","lightgbm","maxent"]
+test_size=  0.2
+k = 5
+scoring="f1_weighted"
+
+[models_pipeline]
+selected_models = ["pipeline_random_forest_class","pipeline_extra_tree_class","pipeline_ada_class","pipeline_bagging_class","pipeline_gbooster","pipeline_xgb_class","pipeline_lightgbm","pipeline_maxent"]
+test_size=  0.2
+k = 5
+scoring="f1_weighted"

@@ -1,43 +1,57 @@
-## Autores
 
-- Título do estudo:
-- Email:
+---
+## **Autoria**
+
+**Título do estudo**
+
+- Título #TODO
+
+**Email**
+
+- email.com
+
+**Link**
+  
 - Link
 
-## Objetivo do modelo
+--- 
+## **Objetivo do modelo**
 
-Forecast and transfer
+- Forecast and transfer
 
-- Target: Suitable (Avaliar artigo que descreve a aplicação de modelo de background)
+- Main Target Output: Suitable #TODO: (Avaliar artigo que descreve a aplicação de modelo de background)
 
-### Focal Taxon
-
-### Location
-
+---
+## **Focal Taxon**
+---
+## **Location**
+---
 Área de estudo: Região da Serra da mantiqueira
+---
+## **Escala da análise**
+---
+- **Extensão das observações**
 
-### Escala da análise:
+Espaço | minx | miny | maxx | maxy |
+|---|----------|----------|----------|----------|
+| Observações | -53.516667   | -31.386923   | -40.06817  |-12.562269  |
+|Serra da mantiqueira| -47.012839   | -23.489618   | -40.169585  |-18.359071  |
 
-Extensão das observações:
+**Spacial resolution**
 
-  - minx: -53.516667
-  - miny: -31.386923
-  - maxx: -40.06817
-  - maxy: -12.562269
+- 1km
   
-Extensão da Serra da mantiqueira em questão:
+**Temporal extend**
 
-  - minx: -47.012839
-  - miny: -23.489618
-  - maxx: -40.169585
-  - maxy: -18.359071
+- Atualmente está com dados desde 1929, porém, é possível filtrar de 2020 para frente caso necessário (Perderíamos cerca de 50% dos dados)
 
-### Temporal extend
+**Type of extent boundary**
 
-Atualmente está com dados desde 1929, porém, é possível filtrar de 2020 para frente caso necessário (Perderíamos cerca de 50% dos dados)
-
-### Biodiversity Data
-
+- Political
+  
+---
+## **Biodiversity Data**
+---
 **Observation type**
 
 - citizen science
@@ -46,14 +60,16 @@ Atualmente está com dados desde 1929, porém, é possível filtrar de 2020 para
 
 - Point occurence
 
-**Predictors**
+## **Predictors**
 
 - Climatic
 - Topographic
 
-**Hypotheses**
+## **Hypotheses**
 
-**Assumptions**
+- #TODO
+- 
+## **Assumptions**
 1- The species is in equilibrium with the environment, i.e. all suitable
 habitats are occupied by the species. This rarely happens, as the
 capacity of the species to occupy habitats is limited mainly by its
@@ -69,25 +85,26 @@ the study area, habitat types, or activity periods.
 3- All variables included in the model are related to species occurrence.
 
 4- The species niche is conserved across space and time.
-**Algorithm**
+
+## **AlgorithmS**
 
 - Maxent
 - Random Forest
-  
-### Workflow
-
+---
+## **Workflow**
+---
 -> Descrição do workflow
 
-### Software
-
+## **Software**
+---
 modeling plataform:
 
 codes:
 
 data sources:
 
-### Obs
-
+## **Obs**
+---
 For this, three main criteria can be
 followed: 1) use biogeographical regions (Comrie and Glenn, 1999;
 Sillero, 2010); 2) avoid areas where the species cannot disperse
