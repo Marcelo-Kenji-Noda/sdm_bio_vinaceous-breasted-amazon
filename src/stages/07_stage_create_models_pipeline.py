@@ -3,6 +3,7 @@ import json
 import os
 import tomllib
 from datetime import datetime
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -196,7 +197,7 @@ if __name__ == "__main__":
 
         tiff_files = [
             os.path.join(
-                config["general"]["output_path"], current_date, "INPUT/TIFF", i
+                Path(os.path.join(config["general"]["output_path"], "features/MANT", i))
             )
             for i in tiff_files
         ]

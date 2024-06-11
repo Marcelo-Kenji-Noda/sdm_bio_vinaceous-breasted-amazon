@@ -1,12 +1,12 @@
 [general]
 force_use_date = false
 output_path = "C:/Users/kenji/dev/sdm_bio_vinaceous-breasted-amazon/data"
-input_path = "C:/Users/kenji/dev/web-scraping-images-vinacea/web-scraping-images-vinacea/assets/"
+input_path = "C:/Users/kenji/dev/sdm_bio_vinaceous-breasted-amazon/data/features/"
 date = "02-06-2024"
     [general.stages]
-    pre_process = true
-    thinning = true
-    background = true
+    pre_process = false
+    thinning = false
+    background = false
     feature_selection = true
 
 [pre_process]
@@ -60,40 +60,40 @@ date = "02-06-2024"
 
 [background]
     raster_file_path = [
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_1.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_2.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_3.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_4.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_5.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_6.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_7.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_8.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_9.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_10.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_11.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_12.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_13.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_14.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_15.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_16.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_17.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_18.tif',
-        'FEATURES/TEMPERATURE/wc2.1_30s_bio_19.tif',
-        'processed/processed/vegetacao_ibge1992_br.tif',
-        'processed/processed/solos2001_br.tif',
-        'processed/processed/sa2001tree_br.tif',
-        'processed/processed/exposicao_br.tif',
-        'processed/processed/density3_br.tif',
-        'processed/processed/declividade_br.tif',
-        'processed/processed/altitude_br.tif',
-        'FEATURES/VEGETACAO/Cultivated_and_Managed_Vegetation.tif',
-        'FEATURES/VEGETACAO/Deciduous_Broadleaf_Trees.tif',
-        'FEATURES/VEGETACAO/Evergreen_Broadleaf_Trees.tif',
-        'FEATURES/VEGETACAO/Herbaceous_Vegetation.tif',
-        'FEATURES/VEGETACAO/Mixed_Other_Trees.tif',
-        'FEATURES/VEGETACAO/Open_Water.tif',
-        'FEATURES/VEGETACAO/Regularly_Flooded_Vegetation.tif',
-        'FEATURES/VEGETACAO/Shrubs.tif'
+        'bioclim01.tif',
+        'bioclim02.tif',
+        'bioclim03.tif',
+        'bioclim04.tif',
+        'bioclim05.tif',
+        'bioclim06.tif',
+        'bioclim07.tif',
+        'bioclim08.tif',
+        'bioclim09.tif',
+        'bioclim10.tif',
+        'bioclim11.tif',
+        'bioclim12.tif',
+        'bioclim13.tif',
+        'bioclim14.tif',
+        'bioclim15.tif',
+        'bioclim16.tif',
+        'bioclim17.tif',
+        'bioclim18.tif',
+        'bioclim19.tif',
+        'ambdata_vegetacao_ibge1992_br.tif',
+        'ambdata_solos2001_br.tif',
+        'ambdata_sa2001tree_br.tif',
+        'ambdata_exposicao_br.tif',
+        'ambdata_density3_br.tif',
+        'ambdata_declividade_br.tif',
+        'ambdata_altitude_br.tif',
+        'processed_Cultivated_and_Managed_Vegetation.tif',
+        'processed_Deciduous_Broadleaf_Trees.tif',
+        'processed_Evergreen_Broadleaf_Trees.tif',
+        'processed_Herbaceous_Vegetation.tif',
+        'processed_Mixed_Other_Trees.tif',
+        'processed_Open_Water.tif',
+        'processed_Regularly_Flooded_Vegetation.tif',
+        'processed_Shrubs.tif'
     ]
 
     raster_file_cols = [
@@ -137,7 +137,7 @@ date = "02-06-2024"
     random_points = false
     spacing = 10
     use_convex_polygon = true
-    
+    features_path = "OUTPUT/features_2.parquet"
 [feature_selection]
 threshhold = 0.7
 file_feature_selection_info ='INFO/feat_selection_info.json'

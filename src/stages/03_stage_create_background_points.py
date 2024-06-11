@@ -43,5 +43,6 @@ if __name__ == "__main__":
             random_points=config["background"]["random_points"],
             spacing=config["background"]["spacing"],
             use_convex_polygon=config["background"]["use_convex_polygon"],
+            features_path=config["background"]["features_path"],
         )
         print(f"[SUCCESS] GENERATE BACKGROUND POINTS STAGE")
